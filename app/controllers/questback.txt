@@ -1,0 +1,21 @@
+$(document).bind("dataUpdate", function(a,b,c){
+	if (b == "pageTransition" && c == "Result Page"){
+		$("body").append("<script src='https://web2.questback.com/Scripts/questback.popup-1.0.0.js'></script>\
+<script>\
+questback.popup.create('https://response.questback.com/questback/bqcht78f0l', {\
+title: 'Popup title text',\
+text: 'Popup dialog text',\
+buttons: [\
+{\
+type: 'participate',\
+text: 'Yes'\
+},\
+{\
+ty: 'decline',\
+text: 'No'\
+}\
+]\
+});\
+</script>")
+	}
+})
